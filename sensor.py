@@ -332,6 +332,8 @@ class Places(Entity):
         home_longitude = str(hass.states.get(home_zone).attributes.get('longitude'))
         if hass.states.get(devicetracker_id) is not None:
             self._entity_picture = hass.states.get(devicetracker_id).attributes.get('entity_picture')
+        else:
+            self._entity_picture = None
         self._street_number = None
         self._street = None
         self._city = None
